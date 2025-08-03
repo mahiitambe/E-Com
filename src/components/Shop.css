@@ -20,7 +20,7 @@
   color: #666;
 }
 
-/* Search and Filter Section */
+
 .search-filter-section {
   background: white;
   padding: 2rem;
@@ -116,7 +116,7 @@
   transform: translateY(-2px);
 }
 
-/* Results Summary */
+
 .results-summary {
   margin-bottom: 2rem;
   padding: 1rem;
@@ -131,7 +131,7 @@
   font-size: 1rem;
 }
 
-/* Products Grid */
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -164,7 +164,7 @@
   font-size: 1.1rem;
 }
 
-/* No Products State */
+
 .no-products {
   text-align: center;
   padding: 4rem 2rem;
@@ -208,7 +208,7 @@
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .shop-container {
     padding: 1rem;
