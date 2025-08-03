@@ -30,7 +30,11 @@ const ProductCard = ({ product, addToCart }) => {
         '&:hover': {
           transform: 'translateY(-4px)',
           boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)',
-        }
+        },
+        p: { xs: 1, sm: 2 }, // Add padding for mobile
+        minWidth: { xs: 0, sm: 250 }, // Prevent overflow on mobile
+        maxWidth: 350,
+        m: 'auto'
       }}
     >
       <Link 
@@ -39,25 +43,32 @@ const ProductCard = ({ product, addToCart }) => {
       >
         <CardMedia
           component="img"
-          height="200"
+          height="160"
           image={product.image}
           alt={product.title}
           sx={{ 
             objectFit: 'contain', 
             backgroundColor: '#f8f9fa',
             transition: 'transform 0.3s ease',
+            width: '100%',
+            maxHeight: { xs: 120, sm: 160, md: 200 }, // Responsive image height
             '&:hover': {
               transform: 'scale(1.05)',
             }
           }}
         />
         
-        <CardContent sx={{ flexGrow: 1, display: 'flex', flexDirection: 'column' }}>
+        <CardContent sx={{ 
+          flexGrow: 1, 
+          display: 'flex', 
+          flexDirection: 'column',
+          p: { xs: 1, sm: 2 }
+        }}>
           <Typography 
             variant="h6" 
             component="h3" 
             sx={{ 
-              fontSize: '14px',
+              fontSize: { xs: '12px', sm: '14px' },
               fontWeight: 600,
               lineHeight: 1.4,
               mb: 1,
@@ -103,7 +114,8 @@ const ProductCard = ({ product, addToCart }) => {
               fontWeight: 700, 
               color: 'primary.main',
               mt: 'auto',
-              mb: 1
+              mb: 1,
+              fontSize: { xs: '1.1rem', sm: '1.25rem' }
             }}
           >
             ${product.price.toFixed(2)}
@@ -133,4 +145,4 @@ const ProductCard = ({ product, addToCart }) => {
   );
 };
 
-export default ProductCard; 
+export default ProductCard;

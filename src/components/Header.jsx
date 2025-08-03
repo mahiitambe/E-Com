@@ -87,7 +87,7 @@ const Header = ({ cartItemCount }) => {
                 }
               }}
             >
-              Snap@Shop
+              SnapShop
             </Typography>
           </Box>
 
@@ -251,4 +251,4 @@ const Header = ({ cartItemCount }) => {
   );
 };
 
-export default Header; 
+export default Header;

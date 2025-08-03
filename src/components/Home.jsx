@@ -77,7 +77,7 @@ const Home = () => {
       {/* Hero Section */}
       <Paper
         sx={{
-          background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+          background: 'linear-gradient(135deg, #757f9a 0%, #d7dde8 100%)', // Grey gradient
           color: 'white',
           py: { xs: 5, md: 8 },
           mb: { xs: 4, md: 6 },
@@ -114,7 +114,7 @@ const Home = () => {
                   wordBreak: 'break-word',
                 }}
               >
-                Welcome to SnapShop
+                SnapShop
               </Typography>
               <Typography
                 variant="h5"
@@ -134,7 +134,7 @@ const Home = () => {
                 startIcon={<ShoppingCartIcon />}
                 sx={{
                   backgroundColor: 'white',
-                  color: 'primary.main',
+                  color: 'success.main', // Use green from theme
                   '&:hover': {
                     backgroundColor: 'rgba(255, 255, 255, 0.9)',
                   },
@@ -151,8 +151,8 @@ const Home = () => {
       {/* Features Section */}
       <Container maxWidth="lg" sx={{ mb: { xs: 4, md: 6 } }}>
         <Box sx={{ textAlign: 'center', mb: 4 }}>
-          <Typography variant="h3" component="h2" gutterBottom sx={{ fontSize: { xs: '1.5rem', md: '2.25rem' } }}>
-            Why Choose Snap@Shop?
+          <Typography variant="h3" component="h2" gutterBottom sx={{ fontSize: { xs: '1.5rem', md: '2.25rem' }, color: '#424242' }}>
+            Why Choose SnapShop?
           </Typography>
         </Box>
         <Grid container spacing={3} justifyContent="center">
@@ -168,13 +168,15 @@ const Home = () => {
                   flexDirection: 'column',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  background: '#f5f5f5', // light grey card
+                  color: '#333',
                   '&:hover': {
                     transform: 'translateY(-8px)',
                   },
                 }}
               >
                 <CardContent>
-                  <Box sx={{ color: 'primary.main', mb: 2 }}>
+                  <Box sx={{ color: '#757575', mb: 2 }}>
                     {feature.icon}
                   </Box>
                   <Typography variant="h6" component="h3" gutterBottom>
@@ -193,7 +195,7 @@ const Home = () => {
       {/* Categories Section */}
       <Container maxWidth="lg" sx={{ mb: { xs: 4, md: 6 } }}>
         <Box sx={{ textAlign: 'center', mb: 4 }}>
-          <Typography variant="h3" component="h2" gutterBottom sx={{ fontSize: { xs: '1.5rem', md: '2.25rem' } }}>
+          <Typography variant="h3" component="h2" gutterBottom sx={{ fontSize: { xs: '1.5rem', md: '2.25rem' }, color: '#424242' }}>
             Shop by Category
           </Typography>
         </Box>
@@ -215,17 +217,18 @@ const Home = () => {
                   justifyContent: 'center',
                   alignItems: 'center',
                   textDecoration: 'none',
-                  color: 'inherit',
+                  color: '#333',
+                  background: '#f5f5f5',
                   transition: 'all 0.3s ease',
                   cursor: 'pointer',
                   '&:hover': {
                     transform: 'translateY(-8px)',
-                    boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)',
+                    boxShadow: '0 8px 25px rgba(117, 127, 154, 0.15)', // grey shadow
                   },
                 }}
               >
                 <CardContent sx={{ textAlign: 'center' }}>
-                  <Box sx={{ fontSize: '48px', mb: 2 }}>
+                  <Box sx={{ fontSize: '48px', mb: 2, color: '#757575' }}>
                     {category.icon}
                   </Box>
                   <Typography variant="h6" component="h3">
@@ -241,7 +244,7 @@ const Home = () => {
       {/* Call to Action */}
       <Paper
         sx={{
-          background: 'linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%)',
+          background: 'linear-gradient(135deg, #ece9e6 0%, #d7dde8 100%)', // Light grey gradient
           py: { xs: 4, md: 6 },
           width: '100%',
           borderRadius: 0,
@@ -250,7 +253,7 @@ const Home = () => {
       >
         <Container maxWidth="md">
           <Box sx={{ textAlign: 'center' }}>
-            <Typography variant="h3" component="h2" gutterBottom sx={{ fontSize: { xs: '1.5rem', md: '2.25rem' } }}>
+            <Typography variant="h3" component="h2" gutterBottom sx={{ fontSize: { xs: '1.5rem', md: '2.25rem' }, color: '#424242' }}>
               Ready to Start Shopping?
             </Typography>
             <Typography variant="h6" color="text.secondary" sx={{ mb: 4, fontSize: { xs: '1rem', md: '1.25rem' } }}>
@@ -262,7 +265,14 @@ const Home = () => {
               variant="contained"
               size="large"
               startIcon={<ShoppingCartIcon />}
-              sx={{ fontWeight: 600 }}
+              sx={{
+                fontWeight: 600,
+                background: 'linear-gradient(135deg, #757f9a 0%, #d7dde8 100%)',
+                color: 'white',
+                '&:hover': {
+                  background: 'linear-gradient(135deg, #616161 0%, #bdbdbd 100%)',
+                }
+              }}
             >
               Browse Products
             </Button>
