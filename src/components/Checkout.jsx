@@ -30,7 +30,7 @@ const Checkout = ({ cart, totalPrice, clearCart }) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate order processing
+   
     await new Promise(resolve => setTimeout(resolve, 2000));
 
     setIsSubmitting(false);
